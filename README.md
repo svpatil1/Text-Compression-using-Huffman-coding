@@ -1,5 +1,13 @@
 # Text-Compression-using-Huffman-coding
 
+Goal: To compress and decompress the files using huffman coding.
+
+Approach:
+1. Build huffman code tree using heapq.
+2. Store the huffman codes in .pkl file (i.e the pickle module implementing binary protocols for serializing and de-serializing a Python object structure.)
+3. Compress and decompress the file using the huffman codes stored in pickle file using pickle functions pickle.dump and pickle.load respectively.
+4. Use SHA256 to check the integrity of the file recovered after decompression with the original file.
+
 ###### Implementation:
 
 def HuffmanCode(char_probability,text,filename,symbolmodel):
@@ -18,7 +26,7 @@ def HuffmanCode(char_probability,text,filename,symbolmodel):
    
    To check the integrity between the input .txt file and the file recovered after decompression, SHA256 supported by hashlib library in python is used. If the hex value for the original text file is equal to the file recovered after decompression, then there is no data loss observed and the file has been correctly decompressed.
    
-    Table 1 shows the evaluation parameters for word and char based symbol model w.r.t “mobydick.txt” file.
+   Table 1 shows the evaluation parameters for word and char based symbol model w.r.t “mobydick.txt” file.
 
 ###### TABLE 1: Evaluation table
 
