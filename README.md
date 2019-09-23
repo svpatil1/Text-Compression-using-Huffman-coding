@@ -5,7 +5,7 @@
 To compress and decompress the files using huffman coding.
 
 ###### Approach:
-
+0. Calculate word frequency and character frequency and store the values in dictionary.
 1. Build huffman code tree using heapq.
 2. Store the huffman codes in .pkl file (i.e the pickle module implementing binary protocols for serializing and de-serializing a Python object structure.)
 3. Compress and decompress the file using the huffman codes stored in pickle file using pickle functions pickle.dump and pickle.load respectively.
